@@ -54,6 +54,8 @@
       if (prettierHref) {
         dom.setAttribute('href', prettierHref)
         dom.setAttribute('target', '_blank')
+        // 网络安全
+        dom.setAttribute('rel', 'noreferrer noopener nofollow');
         if (hasClickEnvenListener) {
           dom.addEventListener('click', e => {
             // 阻止事件冒泡，防止在冒泡中给链接添加前缀
